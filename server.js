@@ -24,7 +24,7 @@ db.sequelize.sync({ force: false }).then(() => {
     response.json({ message: "Attemting to connect a Angular.js app to a PostgresSQL database." });
 });
 */
-require('./src/app/routes/product.routes')(app);
+require('./routes/product.routes')(app);
 
 const PORT = process.env.PORT || 8080;
 

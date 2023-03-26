@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { products } from '../products';
+import { Component, OnInit } from '@angular/core';
+import { Product } from '../product';
+import { ProductService } from '../services/product.service';
 
 @Component({
     selector: 'app-product-list',
@@ -7,8 +8,24 @@ import { products } from '../products';
     styleUrls: ['./product-list.component.css']
 })
 
-export class ProductListComponent{
-    products = products;
+export class ProductListComponent implements OnInit{
+    products?: Product[];
+
+    constructor(private productService: ProductService){}
+
+    ngOnInit(): void{
+        this.retrieveProducts();
+    }
+
+    retrieveProducts(): void{
+        this.productService.getAll().subscribe({
+            next: (data) => {
+                this.products = data;
+                console.log(data);
+            },
+            error: (e) => console.error(e)
+        });
+    }
 
     share(){
         window.alert('The product has been shared');
