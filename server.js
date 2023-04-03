@@ -14,7 +14,24 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-db.sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: true }).then(() => {
+    /*using Sequelize to inject rows to table when running node server.js*/
+    /**remove if not nedded and change force to false*/
+    db.products.create({
+        name: 'Phone XL',
+        price: 799,
+        description: 'A large phone with one of the best screens' 
+    });
+    db.products.create({
+        name: 'Phone Mini',
+        price: 699,
+        description: 'A great phone with one of the best cameras' 
+    });
+    db.products.create({
+        name: 'Phone Standard',
+        price: 299,
+        description: ''
+    });
     console.log('Synced db.');
 }).catch((err) => {
     console.log("Failed to sync db:" + err.message);
