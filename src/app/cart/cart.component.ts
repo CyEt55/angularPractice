@@ -5,8 +5,7 @@ import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  templateUrl: './cart.component.html'
 })
 export class CartComponent {
   items = this.cartService.getItems();
