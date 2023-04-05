@@ -40,15 +40,16 @@
   /* Hyperlink */
   
   $light-blue : #1976d2;
+  $white : white;
 
   a {
     cursor: pointer;
     color: $light-blue;
     text-decoration: none;
-  }
-  
-  a:hover {
-    opacity: 0.8;
+    
+    :hover {
+      opacity: 0.8;
+    }
   }
   
   /* Input */
@@ -78,30 +79,30 @@
     font-size: 14px;
     cursor: pointer;
     background-color: $light-blue;
-    color: white;
+    color: $white;
     border: none;
-  }
   
-  .button:hover, button:hover {
-    opacity: 0.8;
-    font-weight: normal;
-  }
+    :hover {
+      opacity: 0.8;
+      font-weight: normal;
+    }
   
-  .button:disabled, button:disabled {
-    opacity: 0.5;
-    cursor: auto;
+    :disabled {
+      opacity: 0.5;
+      cursor: auto;
+    }
   }
   
   /* Fancy Button */
   
   .fancy-button {
-    background-color: white;
-    color: #1976d2;
-  }
+    background-color: $white;
+    color: $light-blue;
   
-  .fancy-button i.material-icons {
-    color: #1976d2;
-    padding-right: 4px;
+    i.material-icons {
+      color: $light-blue;
+      padding-right: 4px;
+    }
   }
   
   /* Top Bar */
@@ -115,11 +116,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
   
-  app-top-bar h1 {
-    color: white;
-    margin: 0;
+    h1 {
+      color: $white;
+      margin: 0;
+    }
   }
   
   /* Checkout Cart, Shipping Prices */

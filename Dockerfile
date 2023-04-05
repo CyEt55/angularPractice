@@ -15,5 +15,3 @@ FROM nginx:alpine
 COPY --from=build /app/dist/angular-practice /usr/share/nginx/html
 
 EXPOSE 80
-
-CMD ["npm", "start"]
