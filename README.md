@@ -8,6 +8,8 @@ Use the command *node server.js* to start the backend, it will now use Sequelize
 
 Use the command *ng serve --port 8081* to allow Front-End communication with the server.
 
+Upcoming: there will be a new repository that will conatain a ASP.NET Core back-end that will use the https protocol. Change the baseURL inside the file src/app/services/product.service.ts to use https to consume the .NET web API.
+
 Use the command *docker build -t yourdockerimage .* to use the Dockerfile and create an image of the project.
 
 # TODO
