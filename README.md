@@ -14,4 +14,8 @@ Use the command *docker build -t yourdockerimage .* to use the Dockerfile and cr
 
 Use Sequelize ORM to add data to table, allowing to have sample data when the Back-End is initialized.  <-- DONE
 
-Search how to use style preprocesor and update the page styles.
+Search how to use style preprocesor and update the page styles. <-- DONE
+
+Put the Back-End in another folder <-- DONE
+
+Separate the Express server in another project <-- INCOMPLETE
