@@ -5,8 +5,8 @@ import { Product } from '../product';
 
 /**/
 
-const baseUrl = 'http://localhost:8080/api/products';
-/*change the http to https to use a .NET Back-End generated via Visual Studio*/
+const baseUrl = 'http://localhost:5223/api/products';
+/*Change the address and port to match API*/
 
 @Injectable({
     providedIn: 'root'

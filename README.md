@@ -2,6 +2,8 @@
 
 Front-End retrieved from Angular getting started tutorial, and connected to a Express Back-End.
 
+UPDATE: A new Back-End has been generated with Visual Studio, using EntityFrameworkCore
+
 Using Sequelize ORM to connect to a self hosted PostgresSQL database.
 
 UPDATE: the Express Back-End has been separated from this project for better visibilty.
